@@ -9,9 +9,11 @@ package CSE360Assign2;
 public class Calculator { // Second version of the calculator.java file with changes
 
 	private int total;
+	StringBuffer history;
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = new StringBuffer("0");
 	}
 	
 	public int getTotal () { // Returns the current total
@@ -20,14 +22,17 @@ public class Calculator { // Second version of the calculator.java file with cha
 	
 	public void add (int value) { // Adds the parameter to the total value
 		total = total + value;
+		history.append("+" + value);
 	}
 	
 	public void subtract (int value) { // Subtracts the parameter from the total value
 		total = total - value;
+		history.append("-" + value);
 	}
 	
 	public void multiply (int value) { // Multiplies the total by the parameter
 		total = total * value;
+		history.append("*" + value);
 	}
 	
 	public void divide (int value) { // Divides the total by the parameter
@@ -35,9 +40,10 @@ public class Calculator { // Second version of the calculator.java file with cha
 			total = 0;
 		else
 			total = total/value;
+		history.append("/" + value);
 	}
 	
 	public String getHistory () {
-		return "";
+		return history.toString();
 	}
 }
