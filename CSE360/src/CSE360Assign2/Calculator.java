@@ -6,7 +6,7 @@
  */
 package CSE360Assign2;
 
-public class Calculator { // Second version of the calculator.java file with changes
+public class Calculator { // Third version of the calculator.java file with changes
 
 	private int total;
 	StringBuffer history;
