@@ -1,7 +1,8 @@
 /*Name: Yara Hawwari
  * Class ID: 400
  * Assignment 3
- * Description: 
+ * Description: Making changes to calculator class for 
+ * 				Assignment 2 and committing it to Github
  */
 package CSE360Assign2;
 
@@ -18,19 +19,22 @@ public class Calculator {
 	}
 	
 	public void add (int value) {
-		
+		total = total +value;
 	}
 	
 	public void subtract (int value) {
-		
+		total = total-value;
 	}
 	
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total/value;
 	}
 	
 	public String getHistory () {
