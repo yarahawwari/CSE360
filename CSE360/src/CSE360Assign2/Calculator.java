@@ -6,7 +6,7 @@
  */
 package CSE360Assign2;
 
-public class Calculator { // Initial version of the calculator.java file before making changes
+public class Calculator { // Second version of the calculator.java file with changes
 
 	private int total;
 	
@@ -14,24 +14,27 @@ public class Calculator { // Initial version of the calculator.java file before 
 		total = 0;  // not needed - included for clarity
 	}
 	
-	public int getTotal () {
-		return 0;
+	public int getTotal () { // Returns the current total
+		return total;
 	}
 	
-	public void add (int value) {
-		
+	public void add (int value) { // Adds the parameter to the total value
+		total = total + value;
 	}
 	
-	public void subtract (int value) {
-		
+	public void subtract (int value) { // Subtracts the parameter from the total value
+		total = total - value;
 	}
 	
-	public void multiply (int value) {
-		
+	public void multiply (int value) { // Multiplies the total by the parameter
+		total = total * value;
 	}
 	
-	public void divide (int value) {
-		
+	public void divide (int value) { // Divides the total by the parameter
+		if(total == 0)
+			total = 0;
+		else
+			total = total/value;
 	}
 	
 	public String getHistory () {
